@@ -1,0 +1,54 @@
+{
+    "id": "trantor/premake/premake",
+    "version": "5.0.0-beta2",
+    "description": "A build tool",
+    "summary": "premake tool",
+    "contacts": {
+      "Some Person": {
+        "email": "som@person.com",
+        "role": "publisher"
+      },
+      "premake": {
+        "email": "test@test.com",
+        "role": "originator"
+      }
+    },
+    "demands": {
+      "windows and x64": {
+        "install": {
+          "unzip": "https://github.com/premake/premake-core/releases/download/v5.0.0-beta2/premake-5.0.0-beta2-windows.zip",
+          "sha256": "87CFA10ED52FD1F4E835F738AC1033FF302035758671400FEC078B700C622C54",
+          "strip": 1
+        }
+      },
+      "windows and x86": {
+        "install": {
+          "unzip": "https://github.com/premake/premake-core/releases/download/v5.0.0-beta2/premake-5.0.0-beta2-windows.zip",
+          "sha256": "87CFA10ED52FD1F4E835F738AC1033FF302035758671400FEC078B700C622C54",
+          "strip": 1
+        }
+      },
+      "windows": {
+        "exports": {
+          "tools": {
+            "premake5": "premake5.exe"
+          },
+          "paths": {
+            "PATH": "bin"
+          }
+        }
+      },
+      "not windows": {
+        "exports": {
+          "tools": {
+            "cmake": "bin/cmake",
+            "cmake_gui": "bin/cmake-gui",
+            "ctest": "bin/ctest"
+          },
+          "paths": {
+            "PATH": "bin"
+          }
+        }
+      }
+    }
+  }
